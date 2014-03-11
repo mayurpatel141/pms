@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
                     :length => { :minimum => 3 }
 
    has_many :tasks, :dependent => :destroy
-   has_many :tags
+   has_and_belongs_to_many :tags
 
     accepts_nested_attributes_for :tags, :allow_destroy => :true,
     :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }

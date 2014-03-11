@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :username, :project_id
 
-  belongs_to :project
+  has_and_belongs_to_many :projects
 end
