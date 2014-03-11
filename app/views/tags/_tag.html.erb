@@ -1,0 +1,20 @@
+<p>
+  <b>First name:</b>
+  <%= tag.first_name %>
+</p>
+
+<p>
+  <b>Last Name:</b>
+  <%= tag.last_name %>
+</p>
+<p>
+  <b>UserName:</b>
+  <%= tag.username %>
+</p>
+ 
+
+<p>
+  <%= link_to 'Destroy Tag', [tag.project, tag],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

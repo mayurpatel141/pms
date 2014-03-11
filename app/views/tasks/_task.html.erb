@@ -1,0 +1,15 @@
+<p>
+  <b>Name:</b>
+  <%= task.name %>
+</p>
+ 
+<p>
+  <b>Description:</b>
+  <%= task.description %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Task', [task.project, task],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>
