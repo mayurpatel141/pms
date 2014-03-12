@@ -1,0 +1,28 @@
+
+
+
+<div class="user list">
+  <h2>Users</h2>
+  
+  <%= link_to("Add New User", {:action => 'new', :project_id => @project.id}, :class => 'action new') %>
+
+  <table class="table table-striped" summary="User list">
+    <tr class="header">
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+      
+      
+      
+    </tr>
+    <% @tags.each do |tag| %>
+    <tr>
+      <td><%= tag.first_name %></td>
+      <td><%= tag.last_name %></td>
+      <td><%= tag.username%></td>
+      
+      
+    </tr>
+    <% end %>
+  </table>
+</div>
